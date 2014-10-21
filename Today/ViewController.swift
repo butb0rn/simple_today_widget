@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let sharedDefaults = NSUserDefaults(suiteName: "group.butb0rn.TodayExtensionSharingDefaults")
+        sharedDefaults.setObject("Have a great day :D", forKey: "stringKey")
+        sharedDefaults.synchronize()
+        
     }
 
     override func didReceiveMemoryWarning() {
